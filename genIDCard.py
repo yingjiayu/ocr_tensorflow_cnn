@@ -34,7 +34,7 @@ class put_chinese_text(object):
         #linegap = height - ascender + descender
         ypos = int(ascender)
 
-        if not isinstance(text, unicode):
+        if not isinstance(text, np.unicode):
             text = text.decode('utf-8')
         img = self.draw_string(image, pos[0], pos[1]+ypos, text, text_color)
         return img
@@ -54,8 +54,8 @@ class put_chinese_text(object):
         pen.y = y_pos << 6
 
         hscale = 1.0
-        matrix = freetype.Matrix(int(hscale)*0x10000L, int(0.2*0x10000L),\
-                                 int(0.0*0x10000L), int(1.1*0x10000L))
+        matrix = freetype.Matrix(int(hscale) * 0x10000, int(0.2 * 0x10000), \
+                                 int(0.0*0x10000), int(1.1*0x10000))
         cur_pen = freetype.Vector()
         pen_translate = freetype.Vector()
 
