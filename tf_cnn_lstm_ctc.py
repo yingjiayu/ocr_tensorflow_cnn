@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 tf CNN+LSTM+CTC 训练识别不定长数字字符图片
